@@ -13,7 +13,8 @@
     "component/jquery": "*",
     "component/moment": "*",
     "component/popover": "*",
-    "component/type": "*"
+    "component/type": "*",
+    "component/inherit": "*"
   },
   "development": {
     "colinf/darktone": "*"
