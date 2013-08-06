@@ -83,6 +83,8 @@ Datepicker.prototype.date = function() {
 
 Datepicker.prototype.attach = function(el) {
   this.attachTo = el;
+  this.datepicker.find('.prev').html("<<");
+  this.datepicker.find('.next').html(">>");
   return this;
 }
 
