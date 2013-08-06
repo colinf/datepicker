@@ -4,6 +4,7 @@ var moment = require('moment');
 var type = require('type');
 var Popover = require('popover');
 var Calendar = require('calendar');
+var inherit = require('inherit');
 
 /**
  * Expose `ConfirmationPopover`.
@@ -73,7 +74,7 @@ function Datepicker(date, title, options) {
  * Inherits from `Popover.prototype`.
  */
 
-Datepicker.prototype.__proto__ = Popover.prototype;
+inherit(Datepicker, Popover);
 
 
 Datepicker.prototype.date = function() {
@@ -82,6 +83,8 @@ Datepicker.prototype.date = function() {
 
 Datepicker.prototype.attach = function(el) {
   this.attachTo = el;
+  this.datepicker.find('.prev').html("<<");
+  this.datepicker.find('.next').html(">>");
   return this;
 }
 
